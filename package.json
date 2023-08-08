@@ -1,0 +1,12 @@
+{
+  "name": "spotify-fullstack",
+  "version": "1.0.0",
+  "description": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npm run dev --prefix client & npm run start --prefix server"
+  },
+  "author": "",
+  "license": "ISC"
+}
