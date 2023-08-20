@@ -2,6 +2,7 @@ import {useState, useEffect} from 'react';
 import './App.css';
 import axios from 'axios';
 import Navbar from './components/NavbarContainer';
+import Login from './components/Login';
 
 //server test data
 
@@ -22,7 +23,8 @@ import Navbar from './components/NavbarContainer';
 // }
 
 function App() {
-	return <Navbar />;
+	return <Login />;
+	// return <Navbar />;
 }
 
 export default App;
