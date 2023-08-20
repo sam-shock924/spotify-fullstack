@@ -1,5 +1,29 @@
 :root {
     background-color: rgb(51, 49, 52);
     color: white;
-    
 } 
+
+.spotify-form {
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgb(51, 49, 52);    /* You can set your desired background color here */
+    border-radius: 10px;
+    color: white;
+}
+
+.spotify-button {
+    background-color: rgb(216, 112, 43);
+    border: none;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.spotify-button:hover {
+    background-color: rgb(186, 95, 37);
+}
