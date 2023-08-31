@@ -1,8 +1,8 @@
-import '../component_css/Login.css';
+import '../component_css/Signup.css';
 import {useState} from 'react';
 import {Form, Button} from 'react-bootstrap';
 
-function LoginForm() {
+function SignupForm() {
 	const [username, setUsername] = useState('');
 	const [password, setPassword] = useState('');
 
@@ -12,7 +12,7 @@ function LoginForm() {
 	};
 
 	return (
-		<Form className='spotify-form' onSubmit={handleSubmit}>
+		<Form className='create-login-form' onSubmit={handleSubmit}>
 			<Form.Group controlId='username'>
 				<Form.Label>Username</Form.Label>
 				<Form.Control
@@ -45,13 +45,11 @@ function LoginForm() {
 				Please use a combination of letters, numbers, and special characters
 				such as !?_*#$%
 			</Form.Text>
-			<Button className='spotify-button' type='submit'>
+			<Button className='create-login-button' type='submit'>
 				Log In
 			</Button>
 		</Form>
 	);
 }
 
-export default LoginForm;
-
-// export default LoginForm;
+export default SignupForm;

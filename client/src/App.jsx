@@ -2,7 +2,11 @@ import {useState, useEffect} from 'react';
 import './App.css';
 import axios from 'axios';
 import Navbar from './components/NavbarContainer';
-import Login from './components/Login';
+import Signup from './components/Signup';
+import {BrowserRouter, Route, Routes, Link} from 'react-router-dom';
+import Home from './components/Home';
+import Search from './components/Search';
+import PlaylistPage from './components/PlaylistPage';
 
 //server test data
 
@@ -23,8 +27,18 @@ import Login from './components/Login';
 // }
 
 function App() {
-	return <Login />;
-	// return <Navbar />;
+	return (
+		<BrowserRouter>
+			<main>
+				<Routes>
+					<Route path='/' element={<Home />} />
+					<Route path='search' element={<Search />} />
+					<Route path='playlists' element={<PlaylistPage />} />
+					<Route path='signup' element={<Signup />} />
+				</Routes>
+			</main>
+		</BrowserRouter>
+	);
 }
 
 export default App;
