@@ -3,42 +3,30 @@ import './App.css';
 import axios from 'axios';
 import Navbar from './components/NavbarContainer';
 import Signup from './components/Signup';
-import {BrowserRouter, Route, Routes, Link} from 'react-router-dom';
+import {
+	createBrowserRouter,
+	Route,
+	createRoutesFromElements,
+	RouterProvider,
+} from 'react-router-dom';
 import Home from './components/Home';
 import Search from './components/Search';
 import PlaylistPage from './components/PlaylistPage';
+import NavbarContainer from './components/NavbarContainer';
 
-//server test data
-
-// function App() {
-// 	const [name, setName] = useState('Unknown');
-
-// 	useEffect(() => {
-// 		axios.get('/api/name').then((response) => {
-// 			setName(response.data.name);
-// 		});
-// 	}, []);
-
-// 	return (
-// 		<>
-// 			<p>{name} is the best</p>
-// 		</>
-// 	);
-// }
+const router = createBrowserRouter(
+	createRoutesFromElements(
+		<Route path='/' element={<Navbar />}>
+			<Route index element={<Home />} />
+			<Route path='search' element={<Search />} />
+			<Route path='playlists' element={<PlaylistPage />} />
+			<Route path='signup' element={<Signup />} />
+		</Route>
+	)
+);
 
 function App() {
-	return (
-		<BrowserRouter>
-			<main>
-				<Routes>
-					<Route path='/' element={<Home />} />
-					<Route path='search' element={<Search />} />
-					<Route path='playlists' element={<PlaylistPage />} />
-					<Route path='signup' element={<Signup />} />
-				</Routes>
-			</main>
-		</BrowserRouter>
-	);
+	return <RouterProvider router={router} />;
 }
 
 export default App;
