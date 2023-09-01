@@ -3,7 +3,9 @@
   line-height: 1.5;
   font-weight: 400;
   /* color: rgb(216,112,14); */
-  background-color: rgb(51,49,52);
+  --background-color: rgb(51,49,52);
+  --logo-color: rgb(216, 112, 43);
+  background-color: var(--background-color);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;

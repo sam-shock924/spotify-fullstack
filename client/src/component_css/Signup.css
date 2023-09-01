@@ -13,7 +13,7 @@
 }
 
 .create-login-button {
-    background-color: rgb(216, 112, 43);
+    background-color: var(--logo-color);
     border: none;
     width: 100%;
     padding: 10px;
@@ -25,5 +25,5 @@
 }
 
 .create-login-button:hover {
-    background-color: rgb(186, 95, 37);
+    background-color: var(--logo-color);
 }

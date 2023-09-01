@@ -26,7 +26,14 @@
     align-items: center;
 }
 
-/* Push other links to the right */
 .navbar-links-container:not(.navbar-home) {
     margin-left: auto;
+}
+
+.navbar-link-container a.active {
+    color: var(--logo-color);
+}
+
+.navbar-links:hover {
+    color: var(--logo-color);
 }
