@@ -1,9 +1,32 @@
-.navbar {
+.navbar-container {
+    display: flex;
     font-size: 1.5rem;
+    margin: 0 auto;
+    padding: 10px 20px;
+    border: 2px solid white;
+    max-width: 1200px;
+    align-items: center;
+}
+
+.navbar-links-container {
+    border: 1px solid green;
+    padding: auto;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.navbar-links {
+    text-decoration: none;
     color: white;
 }
 
-.navbar-home {
-    text-decoration: none;
-    color: white;
+.navbar-home-container {
+    display: flex;
+    align-items: center;
+}
+
+/* Push other links to the right */
+.navbar-links-container:not(.navbar-home) {
+    margin-left: auto;
 }
