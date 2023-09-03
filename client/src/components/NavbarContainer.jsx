@@ -17,8 +17,11 @@ const NavbarContainer = () => {
 					<NavLink className='navbar-links' to='playlists'>
 						Playlists
 					</NavLink>
-					<NavLink className='navbar-links' to='user-data'>
-						User placeholder
+					<NavLink className='navbar-links' to='login'>
+						Log In
+					</NavLink>
+					<NavLink className='navbar-links' to='signup'>
+						Sign up
 					</NavLink>
 				</div>
 			</div>
