@@ -3,13 +3,13 @@
     font-size: 1.5rem;
     margin: 1em 1em;
     padding: 10px 20px;
-    border: 2px solid white;
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px 0px var(--background-color), 0px 0px 40px 0px var(--background-color), 0px 0px 60px 0px var(--background-color), 0px 0px 80px 0px var(--logo-color);
     max-width: auto;
     align-items: center;
 }
 
 .navbar-links-container {
-    border: 1px solid green;
     padding: auto;
     display: flex;
     gap: 16px;
@@ -30,7 +30,7 @@
     margin-left: auto;
 }
 
-.navbar-link-container a.active {
+.navbar-link-container.active {
     color: var(--logo-color);
 }
 
