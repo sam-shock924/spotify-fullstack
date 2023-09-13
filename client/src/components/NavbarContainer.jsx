@@ -17,12 +17,12 @@ const NavbarContainer = () => {
 					<NavLink className='navbar-links' to='playlists'>
 						Playlists
 					</NavLink>
-					<NavLink className='navbar-links' to='login'>
+					{/* <NavLink className='navbar-links' to='login'>
 						Log In
 					</NavLink>
 					<NavLink className='navbar-links' to='signup'>
 						Sign up
-					</NavLink>
+					</NavLink> */}
 				</div>
 			</div>
 			<main>

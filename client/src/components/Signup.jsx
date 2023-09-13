@@ -11,6 +11,7 @@ function SignupForm() {
 		// Handle login logic here
 	};
 
+	//change password prompt on hover or onChange
 	return (
 		<Form className='create-login-form' onSubmit={handleSubmit}>
 			<Form.Group controlId='username'>
@@ -40,7 +41,6 @@ function SignupForm() {
 					placeholder='Enter password'
 				/>
 			</Form.Group>
-
 			<Form.Text>
 				Please use a combination of letters, numbers, and special characters
 				such as !?_*#$%
