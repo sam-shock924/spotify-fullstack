@@ -9,7 +9,7 @@ import {
 import './App.css';
 import Navbar from './components/NavbarContainer';
 import Signup from './components/Signup';
-import Home from './components/Home';
+import HomeLoggedOut from './components/HomeLoggedOut';
 import Search from './components/Search';
 import Login from './components/Login';
 import PlaylistPage from './components/PlaylistPage';
@@ -17,7 +17,7 @@ import PlaylistPage from './components/PlaylistPage';
 const router = createBrowserRouter(
 	createRoutesFromElements(
 		<Route path='/' element={<Navbar />}>
-			<Route index element={<Home />} />
+			<Route index element={<HomeLoggedOut />} />
 			<Route path='search' element={<Search />} />
 			<Route path='playlists' element={<PlaylistPage />} />
 			<Route path='signup' element={<Signup />} />

@@ -19,10 +19,10 @@ const NavbarContainer = () => {
 					</NavLink>
 					{/* <NavLink className='navbar-links' to='login'>
 						Log In
-					</NavLink>
+	</NavLink> */}
 					<NavLink className='navbar-links' to='signup'>
 						Sign up
-					</NavLink> */}
+					</NavLink>
 				</div>
 			</div>
 			<main>

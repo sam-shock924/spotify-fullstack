@@ -46,7 +46,7 @@ function SignupForm() {
 				such as !?_*#$%
 			</Form.Text>
 			<Button className='create-login-button' type='submit'>
-				Log In
+				Sign Up
 			</Button>
 		</Form>
 	);
