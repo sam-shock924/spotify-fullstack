@@ -1,18 +1,18 @@
 :root {
     background-color: rgb(51, 49, 52);
     color: white;
-} 
+}
 
-.create-signup-form {
+.login-form {
     max-width: 300px;
     margin: 0 auto;
     padding: 20px;
-    background-color: rgb(51, 49, 52);    /* You can set your desired background color here */
+    background-color: rgb(51, 49, 52);
     border-radius: 10px;
     color: white;
 }
 
-.create-signup-button {
+.login-button {
     background-color: var(--logo-color);
     border: none;
     width: 100%;
@@ -24,6 +24,6 @@
     transition: background-color 0.2s;
 }
 
-.create-signup-button:hover {
+.login-button:hover {
     background-color: var(--logo-color);
 }

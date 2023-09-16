@@ -13,6 +13,7 @@ import HomeLoggedOut from './components/HomeLoggedOut';
 import Search from './components/Search';
 import Login from './components/Login';
 import PlaylistPage from './components/PlaylistPage';
+import HomeLoggedIn from './components/HomeLoggedIn';
 
 const router = createBrowserRouter(
 	createRoutesFromElements(
@@ -21,6 +22,7 @@ const router = createBrowserRouter(
 			<Route path='search' element={<Search />} />
 			<Route path='playlists' element={<PlaylistPage />} />
 			<Route path='signup' element={<Signup />} />
+			<Route path='loggedin' element={<HomeLoggedIn />} />
 			<Route path='login' element={<Login />} />
 		</Route>
 	)

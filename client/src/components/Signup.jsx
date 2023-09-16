@@ -8,12 +8,12 @@ function SignupForm() {
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		// Handle login logic here
+		// Handle signup logic here
 	};
 
-	//change password prompt on hover or onChange
+	//change password prompt to on hover or onChange
 	return (
-		<Form className='create-login-form' onSubmit={handleSubmit}>
+		<Form className='create-signup-form' onSubmit={handleSubmit}>
 			<Form.Group controlId='username'>
 				<Form.Label>Username</Form.Label>
 				<Form.Control
@@ -45,7 +45,7 @@ function SignupForm() {
 				Please use a combination of letters, numbers, and special characters
 				such as !?_*#$%
 			</Form.Text>
-			<Button className='create-login-button' type='submit'>
+			<Button className='create-signup-button' type='submit'>
 				Sign Up
 			</Button>
 		</Form>

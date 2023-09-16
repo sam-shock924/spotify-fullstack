@@ -11,15 +11,18 @@ const NavbarContainer = () => {
 					</NavLink>
 				</div>
 				<div className='navbar-links-container'>
+					<NavLink className='navbar-links' to='loggedin'>
+						Logged In Home
+					</NavLink>
 					<NavLink className='navbar-links' to='search'>
 						Search
 					</NavLink>
 					<NavLink className='navbar-links' to='playlists'>
 						Playlists
 					</NavLink>
-					{/* <NavLink className='navbar-links' to='login'>
+					<NavLink className='navbar-links' to='login'>
 						Log In
-	</NavLink> */}
+					</NavLink>
 					<NavLink className='navbar-links' to='signup'>
 						Sign up
 					</NavLink>
