@@ -8,11 +8,11 @@ export default function HomeLoggedIn() {
 				<h1 className='home-logged-in-title2'>Your Spotify!</h1>
 			</div>
 			<div>
-				<table
-					// striped
-					// bordered
-					// hover
-					// variant='dark'
+				<Table
+					striped
+					bordered
+					hover
+					variant='dark'
 					className='home-logged-in-table'
 				>
 					<thead>
@@ -34,7 +34,7 @@ export default function HomeLoggedIn() {
 							<td>*insert 'add to playlist' button*</td>
 						</tr>
 					</tbody>
-				</table>
+				</Table>
 			</div>
 		</div>
 	);
