@@ -1,4 +1,5 @@
 import {Form, Button} from 'react-bootstrap';
+import {NavLink} from 'react-router-dom';
 import {useState} from 'react';
 import '../component_css/Login.css';
 
@@ -20,7 +21,7 @@ export default function Login() {
 
 	return (
 		<Form className='login-form' onSubmit={handleSubmit}>
-			<Form.Group controlId='username'>
+			<Form.Group className='login-username'>
 				<Form.Label>Username</Form.Label>
 				<Form.Control
 					type='text'
@@ -29,7 +30,7 @@ export default function Login() {
 					placeholder='Enter username'
 				/>
 			</Form.Group>
-			<Form.Group controlId='password'>
+			<Form.Group className='login-password'>
 				<Form.Label>Password</Form.Label>
 				<Form.Control
 					type='password'
@@ -38,9 +39,9 @@ export default function Login() {
 					placeholder='Enter password'
 				/>
 			</Form.Group>
-			<Button className='login-button' type='submit'>
+			<NavLink to='/loggedin' className='login-button' type='submit'>
 				Log in
-			</Button>
+			</NavLink>
 		</Form>
 	);
 }

@@ -1,5 +1,6 @@
 import '../component_css/Signup.css';
 import {useState} from 'react';
+import {NavLink} from 'react-router-dom';
 import {Form, Button} from 'react-bootstrap';
 
 function SignupForm() {
@@ -14,7 +15,7 @@ function SignupForm() {
 	//change password prompt to on hover or onChange
 	return (
 		<Form className='create-signup-form' onSubmit={handleSubmit}>
-			<Form.Group controlId='username'>
+			<Form.Group className='signup-username'>
 				<Form.Label>Username</Form.Label>
 				<Form.Control
 					type='text'
@@ -23,7 +24,7 @@ function SignupForm() {
 					placeholder='Enter username'
 				/>
 			</Form.Group>
-			<Form.Group controlId='password'>
+			<Form.Group className='signup-password'>
 				<Form.Label>Password</Form.Label>
 				<Form.Control
 					type='password'
@@ -32,7 +33,7 @@ function SignupForm() {
 					placeholder='Enter password'
 				/>
 			</Form.Group>
-			<Form.Group controlId='password'>
+			<Form.Group className='signup-password'>
 				<Form.Label>Re-Enter Password</Form.Label>
 				<Form.Control
 					type='password'
@@ -41,13 +42,13 @@ function SignupForm() {
 					placeholder='Enter password'
 				/>
 			</Form.Group>
-			<Form.Text>
+			{/* <Form.Text>
 				Please use a combination of letters, numbers, and special characters
 				such as !?_*#$%
-			</Form.Text>
-			<Button className='create-signup-button' type='submit'>
+			</Form.Text> */}
+			<NavLink to='/loggedin' className='create-signup-button' type='submit'>
 				Sign Up
-			</Button>
+			</NavLink>
 		</Form>
 	);
 }

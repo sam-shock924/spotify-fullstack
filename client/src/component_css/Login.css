@@ -4,15 +4,22 @@
 }
 
 .login-form {
+    font-size: 25px;
     max-width: 300px;
     margin: 0 auto;
+    margin-top: 150px;
     padding: 20px;
     background-color: rgb(51, 49, 52);
     border-radius: 10px;
     color: white;
 }
 
-.login-button {
+.login-username, .login-password {
+    padding: 15px;
+    margin: 15px;
+}
+
+/* .login-button {
     background-color: var(--logo-color);
     border: none;
     width: 100%;
@@ -26,4 +33,23 @@
 
 .login-button:hover {
     background-color: var(--logo-color);
+} */
+
+.login-button {
+    background-color: var(--logo-color);
+    text-decoration: none;
+    border: none;
+    width: 100%;
+    padding: 20px;
+    margin: 30px;
+    font-size: large;
+    border-radius: 15px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.25s;
+}
+
+.login-button:hover {
+    transform: scale(1.05);
 }
