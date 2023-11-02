@@ -1,12 +1,12 @@
 const express = require('express');
 const app = express();
-const port = 3000;
+const port = 5173;
 
 app.get('/', (req, res) => {
 	res.send('Hello Spotify!');
 });
 
-app.get('/api/name', (req, res) => {
+app.get('/loggedin', (req, res) => {
 	console.log('Sam is awesome');
 	const response = {
 		name: 'Sam',
