@@ -8,7 +8,7 @@ export default function HomeLoggedIn() {
 
 	useEffect(() => {
 		axios
-			.get('/loggedin')
+			.get('/api/loggedin')
 			.then((response) => {
 				const data = response.data;
 				setName(data.name);
@@ -17,6 +17,7 @@ export default function HomeLoggedIn() {
 				console.error('Error:', error);
 			});
 	}, []);
+
 	console.log(name);
 	return (
 		<div className='home-logged-in-container'>
