@@ -7,7 +7,6 @@ app.get('/', (req, res) => {
 });
 
 app.get('/loggedin', (req, res) => {
-	console.log('Sam is awesome');
 	const response = {
 		name: 'Sam',
 	};

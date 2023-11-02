@@ -7,7 +7,6 @@ export default function HomeLoggedIn() {
 	const [name, setName] = useState('');
 
 	useEffect(() => {
-		// Make a GET request to the server endpoint
 		axios
 			.get('/loggedin')
 			.then((response) => {
