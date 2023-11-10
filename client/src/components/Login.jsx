@@ -3,14 +3,31 @@ import {NavLink} from 'react-router-dom';
 import {useState} from 'react';
 import '../component_css/Login.css';
 
+/*
+
+User authentication:
+- login page (client side)
+- api endpoint (serverside)
+- database role
+
+client http get('/api/todos?user_id=321) => server tcp (SELECT * FROM todos WHERE user_id = 321) => database
+
+- login query form
+	- will be a http post request with a json string of username/password 
+	- connect to tcp database and search for same information
+	- write server code where if http request password === database password then return user id
+	- saves user id in local storage to make get requests for data
+
+- create login form
+- send http post request on submit (client)
+- query database for matching username (server/database)
+- check if password match (server)
+- return user id to client (server)
+- redirect to home page (client)
+
+*/
+
 export default function Login() {
-	/*
-	add: 
-	- username input and label
-	- password input and label
-	- login button
-	- redirect to playlists page
-	*/
 	const [username, setUsername] = useState('');
 	const [password, setPassword] = useState('');
 
