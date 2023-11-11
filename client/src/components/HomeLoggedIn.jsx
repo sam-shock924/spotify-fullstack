@@ -5,6 +5,7 @@ import axios from 'axios';
 
 export default function HomeLoggedIn() {
 	const [name, setName] = useState('');
+	const clientId = import.meta.env.VITE_CLIENT_ID;
 
 	useEffect(() => {
 		axios
@@ -12,6 +13,7 @@ export default function HomeLoggedIn() {
 			.then((response) => {
 				const data = response.data;
 				setName(data.name);
+				console.log(clientId);
 			})
 			.catch((error) => {
 				console.error('Error:', error);
