@@ -10,7 +10,6 @@ app.get('/api/', (req, res) => {
 });
 
 //get authorization token from spotify
-//cant get token to send to front end
 app.get('/api/token', (req, res) => {
 	let tokenParams = {
 		method: 'POST',
@@ -19,14 +18,14 @@ app.get('/api/token', (req, res) => {
 			'Content-Type': 'application/x-www-form-urlencoded',
 		},
 		data: new URLSearchParams({
-			grant_type: 'authorization_code',
+			grant_type: 'client_credentials',
 			client_id: clientid,
 			client_secret: clientsecret,
 		}),
 	};
 	async function getToken() {
-		const fetchToken = axios(tokenParams)
-			.then((tokenRes) => res.send(tokenRes.data))
+		const fetchToken = await axios(tokenParams)
+			.then((tokenRes) => res.send(tokenRes.data.access_token))
 			.catch((err) => console.log(err));
 	}
 	getToken();
@@ -38,13 +37,6 @@ app.get('/api/loggedin', (req, res) => {
 	};
 	res.send(response);
 });
-
-//test api call, will be replaced with spotify api call
-// app.get('/api/playlist', (req, res) => {
-// 	axios
-// 		.get('http://swapi.dev/api/planets/1/')
-// 		.then((axiosResponse) => res.send(axiosResponse.data));
-// });
 
 app.listen(port, () => {
 	console.log(`Example app listening on port ${port}`);

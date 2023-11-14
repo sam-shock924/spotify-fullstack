@@ -22,43 +22,40 @@ export default function HomeLoggedIn() {
 	}, []);
 
 	//token call works here, not sure how to get it to work on the backend
-	useEffect(() => {
-		let tokenParams = {
-			method: 'POST',
-			url: 'https://accounts.spotify.com/api/token',
-			headers: {
-				'Content-Type': 'application/x-www-form-urlencoded',
-			},
-			data: new URLSearchParams({
-				grant_type: 'client_credentials',
-				client_id: clientid,
-				client_secret: clientsecret,
-			}),
-		};
-		async function getToken() {
-			const fetchTokenCall = await axios(tokenParams).then((res) =>
-				setToken(res.data.access_token)
-			);
-		}
-		getToken();
-	}, []);
+	// useEffect(() => {
+	// 	let tokenParams = {
+	// 		method: 'POST',
+	// 		url: 'https://accounts.spotify.com/api/token',
+	// 		headers: {
+	// 			'Content-Type': 'application/x-www-form-urlencoded',
+	// 		},
+	// 		data: new URLSearchParams({
+	// 			grant_type: 'client_credentials',
+	// 			client_id: clientid,
+	// 			client_secret: clientsecret,
+	// 		}),
+	// 	};
+	// 	async function getToken() {
+	// 		const fetchTokenCall = await axios(tokenParams).then((res) =>
+	// 			setToken(res.data.access_token)
+	// 		);
+	// 	}
+	// 	getToken();
+	// }, []);
 
-	console.log(token);
+	// console.log(token);
 
 	// this is me trying to get it to work on the backend
 
-	// useEffect(() => {
-	// 	const fetchToken = async () => {
-	// 		const tokenRes = await axios.get('/api/token');
-	// 		setToken(tokenRes.data);
-	// 	};
-	// 	fetchToken();
-	// }, []);
+	useEffect(() => {
+		const fetchToken = async () => {
+			const tokenRes = await axios.get('/api/token');
+			setToken(tokenRes.data);
+		};
+		fetchToken();
+	}, []);
 
-	// useEffect(() => {
-	// 	console.log(token);
-	// }, [token]);
-
+	console.log(token);
 	// console.log(name);
 	return (
 		<div className='home-logged-in-container'>
