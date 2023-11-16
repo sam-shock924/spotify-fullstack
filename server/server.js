@@ -2,8 +2,7 @@ const express = require('express');
 const app = express();
 const port = 3000;
 const axios = require('axios');
-const clientid = '7880e85c264046a998e4648eb7025ce5';
-const clientsecret = 'ee54b02a846a41b4ba370b2b913e598c';
+require('dotenv').config();
 
 app.get('/api/', (req, res) => {
 	res.send('Hello Spotify!');
@@ -19,8 +18,8 @@ app.get('/api/token', (req, res) => {
 		},
 		data: new URLSearchParams({
 			grant_type: 'client_credentials',
-			client_id: clientid,
-			client_secret: clientsecret,
+			client_id: process.env.VITE_CLIENT_ID,
+			client_secret: process.env.VITE_CLIENT_SECRET,
 		}),
 	};
 	async function getToken() {

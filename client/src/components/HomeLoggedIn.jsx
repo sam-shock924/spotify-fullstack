@@ -6,8 +6,6 @@ import axios from 'axios';
 export default function HomeLoggedIn() {
 	const [token, setToken] = useState('');
 	const [name, setName] = useState('');
-	const clientid = '7880e85c264046a998e4648eb7025ce5';
-	const clientsecret = 'ee54b02a846a41b4ba370b2b913e598c';
 
 	useEffect(() => {
 		axios
@@ -20,32 +18,6 @@ export default function HomeLoggedIn() {
 				console.error('Error:', error);
 			});
 	}, []);
-
-	//token call works here, not sure how to get it to work on the backend
-	// useEffect(() => {
-	// 	let tokenParams = {
-	// 		method: 'POST',
-	// 		url: 'https://accounts.spotify.com/api/token',
-	// 		headers: {
-	// 			'Content-Type': 'application/x-www-form-urlencoded',
-	// 		},
-	// 		data: new URLSearchParams({
-	// 			grant_type: 'client_credentials',
-	// 			client_id: clientid,
-	// 			client_secret: clientsecret,
-	// 		}),
-	// 	};
-	// 	async function getToken() {
-	// 		const fetchTokenCall = await axios(tokenParams).then((res) =>
-	// 			setToken(res.data.access_token)
-	// 		);
-	// 	}
-	// 	getToken();
-	// }, []);
-
-	// console.log(token);
-
-	// this is me trying to get it to work on the backend
 
 	useEffect(() => {
 		const fetchToken = async () => {
